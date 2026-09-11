@@ -180,7 +180,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               aria-label="WhatsApp"
               title="Chat on WhatsApp"
-              className="rounded-lg p-2.5 text-slate-500 transition hover:bg-green-500 hover:text-white dark:text-slate-400"
+              className="rounded-lg p-2.5 text-green-500 transition hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               <WhatsAppIcon size={19} />
             </a>

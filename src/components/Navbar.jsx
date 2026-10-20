@@ -206,102 +206,107 @@ const Navbar = () => {
           </button>
         </div>
       </header>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu */}{" "}
       <div
-        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transition-all duration-300 dark:bg-slate-950/95 lg:hidden ${
-          isOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
+        className={`fixed inset-0 z-40 overflow-hidden bg-white/95 backdrop-blur-xl transition-all duration-300 dark:bg-slate-950/95 lg:hidden ${isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+        aria-hidden={!isOpen}
       >
-        <div className="flex min-h-screen flex-col px-6 pb-10 pt-28">
-          {/* Mobile Navigation */}
-          <nav className="space-y-2">
+        {" "}
+        <div className="flex h-dvh min-h-0 flex-col overflow-y-auto overscroll-contain px-4 pb-5 pt-24 sm:px-6">
+          {" "}
+          {/* Mobile Navigation */}{" "}
+          <nav className="space-y-1">
+            {" "}
             {navLinks.map((link) => {
               const sectionId = link.href.replace("#", "");
               const isActive = activeSection === sectionId;
-
               return (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={handleNavClick}
-                  className={`flex items-center justify-between rounded-xl px-4 py-4 text-lg font-medium transition ${
-                    isActive
-                      ? "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400"
-                      : "text-slate-700 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-white"
-                  }`}
+                  tabIndex={isOpen ? 0 : -1}
+                  className={`flex items-center justify-between rounded-lg px-4 py-2.5 text-base font-medium transition ${isActive ? "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400" : "text-slate-700 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-white"}`}
                 >
-                  <span>{link.name}</span>
-
+                  {" "}
+                  <span>{link.name}</span>{" "}
                   {isActive && (
                     <span className="h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400" />
-                  )}
+                  )}{" "}
                 </a>
               );
-            })}
-          </nav>
-
-          {/* Mobile Theme Toggle */}
-          <div className="mt-6 flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900">
+            })}{" "}
+          </nav>{" "}
+          {/* Mobile Theme Toggle */}{" "}
+          <div className="mt-4 flex shrink-0 items-center justify-between rounded-xl border border-slate-200 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-900">
+            {" "}
             <div>
+              {" "}
               <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                Appearance
-              </p>
-
+                {" "}
+                Appearance{" "}
+              </p>{" "}
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Switch between light and dark mode
-              </p>
-            </div>
-
-            <ThemeToggle />
-          </div>
-
-          {/* Mobile Social Links */}
-          <div className="mt-auto border-t border-slate-200 pt-8 dark:border-slate-800">
-            <div className="grid grid-cols-3 gap-3">
+                {" "}
+                Switch between light and dark mode{" "}
+              </p>{" "}
+            </div>{" "}
+            <ThemeToggle />{" "}
+          </div>{" "}
+          {/* Mobile Social Links */}{" "}
+          <div className="mt-5 shrink-0 border-t border-slate-200 pt-4 dark:border-slate-800">
+            {" "}
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              {" "}
+              Connect with me{" "}
+            </p>{" "}
+            <div className="grid grid-cols-3 gap-2">
+              {" "}
               <a
                 href="https://github.com/ademola1110"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-3 text-sm font-medium text-slate-600 transition hover:border-cyan-500 hover:text-cyan-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
+                tabIndex={isOpen ? 0 : -1}
+                aria-label="Visit GitHub profile"
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-1 py-3 text-xs font-medium text-slate-600 transition hover:border-cyan-500 hover:text-cyan-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
               >
-                <Github size={18} />
-                GitHub
-              </a>
-
+                {" "}
+                <Github size={17} /> GitHub{" "}
+              </a>{" "}
               <a
                 href="https://www.linkedin.com/in/ademola-idris-akinola-1660b5425/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-3 text-sm font-medium text-slate-600 transition hover:border-cyan-500 hover:text-cyan-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
+                tabIndex={isOpen ? 0 : -1}
+                aria-label="Visit LinkedIn profile"
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-1 py-3 text-xs font-medium text-slate-600 transition hover:border-cyan-500 hover:text-cyan-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
               >
-                <Linkedin size={18} />
-                LinkedIn
-              </a>
-
+                {" "}
+                <Linkedin size={17} /> LinkedIn{" "}
+              </a>{" "}
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-3 text-sm font-medium text-slate-600 transition hover:border-green-500 hover:text-green-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-green-500 dark:hover:text-green-400"
+                tabIndex={isOpen ? 0 : -1}
+                aria-label="Contact me on WhatsApp"
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-1 py-3 text-xs font-medium text-slate-600 transition hover:border-green-500 hover:text-green-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-green-500 dark:hover:text-green-400"
               >
-                <WhatsAppIcon size={18} />
-                WhatsApp
-              </a>
-            </div>
-
+                {" "}
+                <WhatsAppIcon size={17} /> WhatsApp{" "}
+              </a>{" "}
+            </div>{" "}
             <a
               href="#contact"
               onClick={handleNavClick}
-              className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-400"
+              tabIndex={isOpen ? 0 : -1}
+              className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
-              Hire Me
-              <ArrowUpRight size={18} />
-            </a>
-          </div>
-        </div>
+              {" "}
+              Hire Me <ArrowUpRight size={18} />{" "}
+            </a>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     </>
   );

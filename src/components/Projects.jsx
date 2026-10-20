@@ -37,38 +37,38 @@ const projects = [
     liveDemo: null,
   },
 
-  // {
-  //   id: 2,
-  //   title: "School Management System",
-  //   shortDescription:
-  //     "A digital school management platform for managing students, teachers, classes, attendance, results, and administration.",
-  //   description:
-  //     "A comprehensive school management solution designed to help educational institutions manage their daily academic and administrative operations from one centralized platform.",
-  //   image:
-  //     "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-  //   technologies: [
-  //     "React",
-  //     "Node.js",
-  //     "Express.js",
-  //     "MongoDB",
-  //     "Tailwind CSS",
-  //     "REST API",
-  //   ],
-  //   features: [
-  //     "Student management",
-  //     "Teacher management",
-  //     "Class management",
-  //     "Attendance management",
-  //     "Result management",
-  //     "Admin dashboard",
-  //     "Online admission",
-  //     "Parent portal",
-  //     "Fees and payment management",
-  //   ],
-  //   role: "Full Stack Developer",
-  //   github: null,
-  //   liveDemo: null,
-  // },
+  {
+    id: 2,
+    title: "School Management System",
+    shortDescription:
+      "A digital school management platform for managing students, teachers, classes, attendance, results, and administration.",
+    description:
+      "A comprehensive school management solution designed to help educational institutions manage their daily academic and administrative operations from one centralized platform.",
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "REST API",
+    ],
+    features: [
+      "Student management",
+      "Teacher management",
+      "Class management",
+      "Attendance management",
+      "Result management",
+      "Admin dashboard",
+      "Online admission",
+      "Parent portal",
+      "Fees and payment management",
+    ],
+    role: "Full Stack Developer",
+    github: null,
+    liveDemo: null,
+  },
 
   {
     id: 3,
@@ -103,35 +103,35 @@ const projects = [
     liveDemo: null,
   },
 
-  // {
-  //   id: 4,
-  //   title: "Business Management Dashboard",
-  //   shortDescription:
-  //     "A modern administrative dashboard for monitoring business activities, managing data, and viewing important business metrics.",
-  //   description:
-  //     "A responsive business management dashboard designed to provide administrators with a centralized interface for monitoring operations, managing records, and viewing important business information.",
-  //   image:
-  //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-  //   technologies: [
-  //     "React",
-  //     "Tailwind CSS",
-  //     "JavaScript",
-  //     "REST API",
-  //     "Lucide React",
-  //   ],
-  //   features: [
-  //     "Responsive dashboard",
-  //     "Statistics overview",
-  //     "Data management",
-  //     "Navigation system",
-  //     "Reusable components",
-  //     "Responsive tables",
-  //     "Modern UI",
-  //   ],
-  //   role: "Frontend Developer",
-  //   github: null,
-  //   liveDemo: null,
-  // },
+  {
+    id: 4,
+    title: "Business Management Dashboard",
+    shortDescription:
+      "A modern administrative dashboard for monitoring business activities, managing data, and viewing important business metrics.",
+    description:
+      "A responsive business management dashboard designed to provide administrators with a centralized interface for monitoring operations, managing records, and viewing important business information.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST API",
+      "Lucide React",
+    ],
+    features: [
+      "Responsive dashboard",
+      "Statistics overview",
+      "Data management",
+      "Navigation system",
+      "Reusable components",
+      "Responsive tables",
+      "Modern UI",
+    ],
+    role: "Frontend Developer",
+    github: null,
+    liveDemo: null,
+  },
 ];
 
 const Projects = () => {
